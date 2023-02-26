@@ -84,12 +84,12 @@ public class OutputView {
         System.out.println(player);
     }
 
-    public void printWinnerGameAllResult(Map<Name, Goal> prizeResult) {
+    public void printWinnerGameAllResult(Game game) {
         stringBuilder = new StringBuilder();
-        for (Name name : prizeResult.keySet()) {
+        for (Name name : game.getPrizeWinners().keySet()) {
             stringBuilder.append(name.getName())
                     .append(" : ")
-                    .append(prizeResult.get(name).getGoal())
+                    .append(game.getGameGoal(name))
                     .append(System.lineSeparator());
         }
         System.out.print(stringBuilder.toString());

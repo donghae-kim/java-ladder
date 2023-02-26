@@ -32,4 +32,8 @@ public class LadderGoal {
     public List<Goal> getLadderGoal() {
         return Collections.unmodifiableList(ladderGoal);
     }
+
+    public Goal getGoal(int index){
+        return ladderGoal.get(index);
+    }
 }

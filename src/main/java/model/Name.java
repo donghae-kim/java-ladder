@@ -2,6 +2,8 @@ package model;
 
 import message.ExceptionMessage;
 
+import java.util.Objects;
+
 public class Name {
     private static final int MAXIMUM_NAME_LENGTH = 5;
 
@@ -31,11 +33,14 @@ public class Name {
 
     @Override
     public int hashCode() {
-        return name.hashCode();
+        return Objects.hash(name);
     }
 
     @Override
     public boolean equals(Object o) {
-        return this.hashCode() == o.hashCode();
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Name name = (Name) o;
+        return Objects.equals(this.name, name.name);
     }
 }

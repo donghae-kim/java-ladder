@@ -92,7 +92,7 @@ public class Controller {
 
     private void printWinnerResult(Winner winner, Game game) {
         if (winner.isAllEndWinner()) {
-            outputView.printWinnerGameAllResult(game.getPrizeWinners());
+            outputView.printWinnerGameAllResult(game);
             return;
         }
         outputView.printWinnerGameResult(game.getPrizeIndividualWinner(winner));
