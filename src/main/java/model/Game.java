@@ -31,8 +31,8 @@ public class Game {
         return Collections.unmodifiableMap(prizeResult);
     }
 
-    public Goal getGameGoal(Name name) {
-        return prizeResult.get(name);
+    public String getGameGoal(Name name) {
+        return prizeResult.get(name).getGoal();
     }
 
 }
